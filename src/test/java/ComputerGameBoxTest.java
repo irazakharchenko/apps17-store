@@ -44,7 +44,7 @@ public class ComputerGameBoxTest {
         assertEquals(cgbox.search(cgp1).get(0), cg);
         //assertEquals(cgbox2.search(cgp1), );
 
-        assertEquals(cgbox2.equals(cgbox), false);
+
         assertEquals(cgbox2.getObj().get(0).getSpec().toString(), "ComputerGameParams{name='Counter Strike', " +
                 "description='null', price=0.0, ageRestrinct=0, genres=[action, simulation]}");
     }
