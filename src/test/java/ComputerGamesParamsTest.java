@@ -9,12 +9,18 @@ import static org.junit.Assert.assertEquals;
 
 
 public class ComputerGamesParamsTest {
-    private ComputerGameParams cgp;
+    private ComputerGameParams cgp, cgp1, cgp2;
     @Before
     public void initializationOfObject(){
         ArrayList<Genres> genres = new ArrayList<>();
         genres.add(Genres.ACTION);
+
+
         cgp = new ComputerGameParams("Counter Strike", genres);
+        cgp1 = new ComputerGameParams(cgp);
+        genres.add(Genres.MOBA);
+        cgp2 = new ComputerGameParams("Some name", "short description", 12.9, 12,
+                genres);
     }
 
 
@@ -23,5 +29,9 @@ public class ComputerGamesParamsTest {
 
         assertEquals("ComputerGameParams{name='Counter Strike', description='null', price=0.0, " +
                 "ageRestrinct=0, genres=[action]}", cgp.toString());
+        assertEquals("ComputerGameParams{name='Counter Strike', description='null', price=0.0, " +
+                "ageRestrinct=0, genres=[action]}", cgp1.toString());
+        assertEquals("ComputerGameParams{name='Some name', description='short description', price=12.9, " +
+                "ageRestrinct=12, genres=[action, moba]}", cgp2.toString());
     }
 }

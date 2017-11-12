@@ -78,9 +78,10 @@ public class ComputerGameParams {
     }
 
     public boolean matches(ComputerGameParams otherPar){
-        if( getName() != null && (!getName().equals(""))  && getName() != otherPar.getName() )
+        if( getName() != null && (!getName().equals(""))  &&  !getName().equals(otherPar.getName()) )
             return false;
-        if( getDescription() != null && (!getDescription().equals("")) && getDescription() != otherPar.getDescription())
+        if( getDescription() != null && (!getDescription().equals("")) &&
+                !getDescription().equals(otherPar.getDescription()))
             return false;
         if (getPrice() != 0.0 && getPrice() != otherPar.getPrice())
             return false;
