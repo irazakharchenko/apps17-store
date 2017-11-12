@@ -67,12 +67,31 @@ public class ComputerGameParams {
     public ComputerGameParams(String name,
                               String description,
                               double price,
-                              int ageRestrinct){
+                              int ageRestrinct,
+                              ArrayList<Genres> genres){
         setName(name);
         setAgeRestrinct(ageRestrinct);
         setDescription(description);
         setPrice(price);
+        setGenres(genres);
         //new ComputerGame();
+    }
+
+    public boolean matches(ComputerGameParams otherPar){
+        if( getName() != null && (!getName().equals(""))  && getName() != otherPar.getName() )
+            return false;
+        if( getDescription() != null && (!getDescription().equals("")) && getDescription() != otherPar.getDescription())
+            return false;
+        if (getPrice() != 0.0 && getPrice() != otherPar.getPrice())
+            return false;
+        if (getAgeRestrinct() != otherPar.getAgeRestrinct())
+            return false;
+        for(Genres gen: otherPar.getGenres()){
+            if(!getGenres().contains(gen))
+                return false;
+        }
+        return true;
+
     }
 
 

@@ -1,4 +1,4 @@
-package internetshop;
+
 
 import org.junit.Before;
 import org.junit.Test;
@@ -21,6 +21,7 @@ public class ComputerGamesParamsTest {
     @Test
     public void testToString(){
 
-        assertEquals("'Counter Strike'", cgp.toString());
+        assertEquals("ComputerGameParams{name='Counter Strike', description='null', price=0.0, " +
+                "ageRestrinct=0, genres=[action]}", cgp.toString());
     }
 }
