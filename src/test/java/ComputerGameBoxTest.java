@@ -71,5 +71,5 @@ public class ComputerGameBoxTest {
                 "Game with ComputerGameParams{name='some name', description='short description', price=12.9," +
                 " ageRestrinct=12, genres=[action, simulation, moba]}\n");
     }
-    
+
 }

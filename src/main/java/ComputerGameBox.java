@@ -1,7 +1,4 @@
-
-
 import java.util.ArrayList;
-
 
 
 public class ComputerGameBox {
@@ -33,9 +30,6 @@ public class ComputerGameBox {
         return null;
     }
 
-
-
-
     public void addGame(ComputerGame game) {
 
         obj.add(game);
@@ -46,25 +40,20 @@ public class ComputerGameBox {
     public ArrayList<ComputerGame> search(ComputerGameParams searchPar) {
         ArrayList<ComputerGame> matchingGames = new ArrayList<ComputerGame>();
 
-            for (ComputerGame game : obj) {
-                if (game.getSpec().matches(searchPar)) {
-                    matchingGames.add(game);
-                }
-
-
+        for (ComputerGame game : obj) {
+            if (game.getSpec().matches(searchPar)) {
+                matchingGames.add(game);
             }
-
-
-
+        }
         return matchingGames;
 
 
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         StringBuilder line = new StringBuilder("");
-        for(ComputerGame scg : getObj()){
+        for (ComputerGame scg : getObj()) {
             line.append(scg.toString()).append("\n");
         }
         return line.toString();
