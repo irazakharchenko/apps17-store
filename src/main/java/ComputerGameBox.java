@@ -1,13 +1,11 @@
 
-import sun.awt.image.ImageWatched;
 
 import java.util.ArrayList;
 
-import java.util.LinkedList;
-import java.util.List;
+
 
 public class ComputerGameBox {
-    protected ArrayList<ComputerGame> obj = new ArrayList<ComputerGame>();
+    private ArrayList<ComputerGame> obj = new ArrayList<ComputerGame>();
 
     public ComputerGameBox(ArrayList<ComputerGame> obj) {
         setObj(new ArrayList<ComputerGame>(obj));
@@ -42,12 +40,12 @@ public class ComputerGameBox {
 
     }
 
-    public List<ComputerGame> search(ComputerGameParams searchPar) {
-        List matchingGames = new ArrayList();
+    public ArrayList<ComputerGame> search(ComputerGameParams searchPar) {
+        ArrayList<ComputerGame> matchingGames = new ArrayList<ComputerGame>();
 
             for (ComputerGame game : obj) {
                 if (game.getSpec().matches(searchPar)) {
-                    matchingGames.add(obj);
+                    matchingGames.add(game);
                 }
 
 
@@ -58,6 +56,15 @@ public class ComputerGameBox {
         return matchingGames;
 
 
+    }
+
+    @Override
+    public String toString(){
+        StringBuilder line = new StringBuilder("");
+        for(ComputerGame scg : getObj()){
+            line.append(scg.toString()).append("\n");
+        }
+        return line.toString();
     }
 }
 

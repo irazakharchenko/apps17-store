@@ -22,5 +22,8 @@ public class ComputerGame {
         return id;
     }
 
-
+    @Override
+    public String toString() {
+        return "Game with " + params.toString();
+    }
 }

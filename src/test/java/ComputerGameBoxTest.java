@@ -33,6 +33,12 @@ public class ComputerGameBoxTest {
         cgbox2 = new ComputerGameBox(cgbox.getObj());
     }
 
+    @Test
+    public void addGame() throws Exception{
+
+        assertEquals(cgbox2.getObj().contains(cg), true);
+        assertEquals(cgbox2.getObj().contains(cg1), false);
+    }
 
 
     @Test
@@ -42,6 +48,7 @@ public class ComputerGameBoxTest {
         assertEquals(cgbox2.getObj().get(0), cg);
         cgbox2.search(cgp);
         assertEquals(cgbox.search(cgp1).get(0), cg);
+        assertEquals(cgbox2.search(cgp1).get(0), cg);
         //assertEquals(cgbox2.search(cgp1), );
 
 
@@ -52,6 +59,14 @@ public class ComputerGameBoxTest {
     @Test
     public void getGame() throws Exception {
 
+    }
+
+    @Test
+    public void testToString() throws  Exception{
+        assertEquals(cgbox2.toString(), "Game with ComputerGameParams{name='Counter Strike', " +
+                "description='null', price=0.0, ageRestrinct=0, genres=[action, simulation]}\n" +
+                "Game with ComputerGameParams{name='Some name', description='short description', price=12.9," +
+                " ageRestrinct=12, genres=[action, simulation, moba]}\n");
     }
 
 }
