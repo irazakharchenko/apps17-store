@@ -52,21 +52,21 @@ public class ComputerGameBoxTest {
         //assertEquals(cgbox2.search(cgp1), );
 
 
-        assertEquals(cgbox2.getObj().get(0).getSpec().toString(), "ComputerGameParams{name='Counter Strike', " +
+        assertEquals(cgbox2.getObj().get(0).getSpec().toString(), "ComputerGameParams{name='counter strike', " +
                 "description='null', price=0.0, ageRestrinct=0, genres=[action, simulation]}");
     }
 
     @Test
     public void getGame() throws Exception {
 
-        assertEquals(cgbox2.getGame(cg1.getSpec().getName()), null);
+        assertEquals(cgbox2.getGame("counter strike"), cg);
         assertEquals(cgbox2.getGame(cg3.getSpec().getName()), null);
         assertEquals(cgbox.getGame("some name"), cg2);
     }
 
     @Test
     public void testToString() throws  Exception{
-        assertEquals(cgbox2.toString(), "Game with ComputerGameParams{name='Counter Strike', " +
+        assertEquals(cgbox2.toString(), "Game with ComputerGameParams{name='counter strike', " +
                 "description='null', price=0.0, ageRestrinct=0, genres=[action, simulation]}\n" +
                 "Game with ComputerGameParams{name='some name', description='short description', price=12.9," +
                 " ageRestrinct=12, genres=[action, simulation, moba]}\n");
