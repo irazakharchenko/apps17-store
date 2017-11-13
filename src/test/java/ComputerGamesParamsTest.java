@@ -27,11 +27,11 @@ public class ComputerGamesParamsTest {
     @Test
     public void testToString(){
 
-        assertEquals("ComputerGameParams{name='Counter Strike', description='null', price=0.0, " +
+        assertEquals("ComputerGameParams{name='counter strike', description='null', price=0.0, " +
                 "ageRestrinct=0, genres=[action]}", cgp.toString());
-        assertEquals("ComputerGameParams{name='Counter Strike', description='null', price=0.0, " +
+        assertEquals("ComputerGameParams{name='counter strike', description='null', price=0.0, " +
                 "ageRestrinct=0, genres=[action]}", cgp1.toString());
-        assertEquals("ComputerGameParams{name='Some name', description='short description', price=12.9, " +
+        assertEquals("ComputerGameParams{name='some name', description='short description', price=12.9, " +
                 "ageRestrinct=12, genres=[action, moba]}", cgp2.toString());
     }
 }

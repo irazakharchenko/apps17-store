@@ -17,7 +17,7 @@ public class ComputerGameBoxTest {
         genres.add(Genres.SIMULATION);
         genres1.add(Genres.ADVENTURE);
 
-        cgp = new ComputerGameParams("Counter Strike", genres);
+        cgp = new ComputerGameParams("counter Strike", genres);
         cgp1 = new ComputerGameParams(cgp);
         genres.add(Genres.MOBA);
         cgp2 = new ComputerGameParams("Some name", "short description", 12.9, 12,
