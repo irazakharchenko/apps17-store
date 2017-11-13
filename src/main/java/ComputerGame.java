@@ -2,7 +2,7 @@
 
 public class ComputerGame {
     private static int generalId = 0;
-    private final int id = generalId++;
+    private final int id = ComputerGame.generalId++;
     private ComputerGameParams params;
 
 

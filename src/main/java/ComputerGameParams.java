@@ -69,9 +69,9 @@ public class ComputerGameParams {
                               double price,
                               int ageRestrinct,
                               ArrayList<Genres> genres){
-        setName(name);
+        setName(name.toLowerCase());
         setAgeRestrinct(ageRestrinct);
-        setDescription(description);
+        setDescription(description.toLowerCase());
         setPrice(price);
         setGenres(genres);
         //new ComputerGame();
