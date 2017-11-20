@@ -1,6 +1,6 @@
-public class CashStrategy implements PaymentStrategy {
+public class PrivatPayment implements PaymentStrategy{
 
-    public String namePayment = "Cash";
+    public String namePayment = "Privat 24";
     public boolean pay(double pay){
         return true;
     }

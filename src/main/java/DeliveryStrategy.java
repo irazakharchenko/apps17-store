@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+
 public interface DeliveryStrategy {
-    public boolean delivery(ArrayList<ComputerGame> cg);
+    public boolean deliver(ArrayList<ComputerGame> cg);
 }

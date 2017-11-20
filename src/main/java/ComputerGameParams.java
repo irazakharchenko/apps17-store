@@ -24,6 +24,9 @@ public class ComputerGameParams {
     public ComputerGameParams(String name, ArrayList<Genres> genres) {
         setName(name);
         setGenres( new  ArrayList<Genres>(genres));
+        setAgeRestrinct(18);
+        setDescription("interesting game");
+        setPrice(19.6);
 
     }
 
