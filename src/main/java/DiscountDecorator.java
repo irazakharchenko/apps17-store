@@ -6,9 +6,7 @@ public class DiscountDecorator extends CartDecorator{
         return cd;
     }
 
-    public void setCd(CartDecorator cd) {
-        this.cd = cd;
-    }
+
 
 
     public DiscountDecorator(Cart cart){
